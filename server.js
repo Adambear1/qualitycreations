@@ -32,7 +32,7 @@ db().then((connection) => {
   );
 });
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV === "production" || process.env.NODE_ENV === "developement") {
   app.use(express.static("client/build"));
 }
 
